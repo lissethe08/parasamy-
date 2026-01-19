@@ -10,22 +10,22 @@ body {
 }
 
 .game-container {
-    width: 100%;
+    width: 95%;
     max-width: 600px;
     height: 250px;
-    background-image: url('img/fondo-paisaje.png'); /* Ruta corregida */
+    background-image: url('img/fondo-paisaje.png');
     background-size: cover;
     background-position: bottom;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    border-bottom: 5px solid #8bc34a;
+    border-bottom: 8px solid #8bc34a;
 }
 
 #kitty {
     width: 60px;
     height: 60px;
-    background-image: url('img/kitty-walk.png'); /* Ruta corregida */
+    background-image: url('img/kitty-walk.png');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -35,31 +35,31 @@ body {
 }
 
 #fresa {
-    width: 100px;
+    width: 40px;
     height: 40px;
-    background-image: url('img/strawberry.png'); /* Ruta corregida */
+    background-image: url('img/strawberry.png');
     background-size: contain;
-    background-repeat: space;
+    background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
-    right: -120px;
+    right: -50px;
 }
 
 #casita {
     width: 110px;
     height: 110px;
-    background-image: url('img/casita.png'); /* Ruta corregida */
+    background-image: url('img/casita.png');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
     right: -150px;
+    transition: right 2s ease-out;
 }
 
-/* Animaciones */
 .fresa-move { animation: moverFresa 1.5s linear infinite; }
 @keyframes moverFresa {
-    0% { right: -120px; }
+    0% { right: -50px; }
     100% { right: 100%; }
 }
 
@@ -76,16 +76,17 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: #d81b60;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     padding: 5px 10px;
     border-radius: 10px;
+    z-index: 5;
 }
 
 #gameOverScreen {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -95,10 +96,12 @@ body {
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    background: white;
+    background: #ff4081;
+    color: white;
 }
