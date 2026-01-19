@@ -1,93 +1,29 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #fce4ec;
-}
-
-.game-container {
-    width: 600px;
-    height: 250px;
-    background-image: url('img/fondo-paisaje.png');
-    background-size: cover;
-    background-position: bottom;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    border-bottom: 5px solid #8bc34a; /* Color césped */
-}
-
-#kitty {
-    width: 60px;
-    height: 60px;
-    background-image: url('img/kitty-walk.png');
+#kitty, #fresa, #casita {
+    background-color: transparent !important; /* Evita cuadros de color */
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 0;
-    left: 50px;
-    z-index: 2;
 }
 
 #fresa {
     width: 100px; /* Espacio para las 3 fresas */
-    height: 40px;
+    height: 45px;
     background-image: url('img/strawberry.png');
-    background-size: contain;
-    background-repeat: space; /* Esto crea las 3 fresas solas */
-    position: absolute;
-    bottom: 0;
-    right: -120px;
-}
-
-#casita {
-    width: 110px;
-    height: 110px;
-    background-image: url('img/casita.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
+    background-repeat: space; /* Esto las clona automáticamente */
+    bottom: 20px;
     right: -150px;
-    transition: right 2s ease-out;
 }
 
-.fresa-move { animation: moverFresa 1.5s linear infinite; }
-@keyframes moverFresa {
-    0% { right: -120px; }
-    100% { right: 100%; }
-}
-
-.jump { animation: saltarAnim 0.6s linear; }
-@keyframes saltarAnim {
-    0%, 100% { bottom: 0; }
-    50% { bottom: 120px; }
-}
-
-#score {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #d81b60;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-#gameOverScreen {
-    position: absolute;
+.game-container {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    z-index: 10;
+    max-width: 600px;
+    height: 250px;
+    background-image: url('img/fondo-paisaje.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border-bottom: 8px solid #8bc34a; /* El césped donde pisa Kitty */
 }
+/* ... el resto de animaciones que te pasé antes siguen igual ... */
