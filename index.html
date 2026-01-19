@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Juego para Sammy ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,11 +14,11 @@
         <div id="casita"></div>
         
         <div id="gameOverScreen">
-            <h1>¡GAME OVER! 🍓</h1>
-            <button onclick="reiniciarJuego()">Reintentar</button>
+            <h1 style="margin: 0;">¡GAME OVER! 🍓</h1>
+            <button onclick="reiniciarJuego()" style="margin-top: 20px;">REINTENTAR</button>
         </div>
     </div>
-    <p>Toca la pantalla para saltar y llegar a la casita</p>
+    <p style="color: #d81b60; font-weight: bold;">Toca para saltar y llegar a la casita 🏠</p>
     <script src="script.js"></script>
 </body>
 </html>
